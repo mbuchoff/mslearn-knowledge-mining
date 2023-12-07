@@ -16,7 +16,7 @@ In this exercise, you'll create an Azure AI Search solution, import some sample 
 
 Before you can begin using a Debug Session, you need to create an Azure Cognitive Search service.
 
-1. [![Azure resource deploy button.](../media/08-media/deploy-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-knowledge-mining%2Fmaster%2Fazuredeploy.json) select this button to deploy all the resources you need in the Azure portal.
+1. [![Azure resource deploy button.](../media/08-media/deploy-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-knowledge-mining%2Fmaster%2Fazuredeploy.json) select this button [or click this link](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-knowledge-mining%2Fmaster%2Fazuredeploy.json) to deploy all the resources you need in the Azure portal.
 
     ![A screenshot of the arm deployment template with fields entered.](../media/08-media/arm-template-deployment.png)
 
@@ -75,6 +75,8 @@ The indexer will now begin to ingest 50 documents. However, if you check the sta
 1. Select **Create**.
 1. Select your new container in the list, then select **Select**.
 
+1. For the **Indexer Template**, select **hotels-sample-indexer**.
+
 1. Select **Save Session**.
 
     The dependency graph shows you that for each document there's an error on three skills.
@@ -113,7 +115,7 @@ If you look back at the dependency graph, the Language detection skill has outpu
     ![A screenshot showing the issue resolved.](../media/08-media/error-fixed.png)
 1. Select **OK**.
 
-1. Now you need to make sure that your skillset is attached to an Azure AI Services resource, otherwise you'll hit the basic quote and the indexer will timeout. To do this, select **Skillsets** in the left pane, then select your **hotels-sample-skillset**.
+1. Now you need to make sure that your skillset is attached to an Azure AI Services resource, otherwise you'll hit the basic quota and the indexer will timeout. To do this, select **Skillsets** in the left pane, then select your **hotels-sample-skillset**.
 
     ![A screenshot showing the skillset list.](../media/08-media/update-skillset.png)
 1. Select the **AI Services** tab, then select the AI services resource in the list.
